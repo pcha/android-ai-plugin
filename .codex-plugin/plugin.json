@@ -1,0 +1,37 @@
+{
+  "name": "android-development-plugin",
+  "version": "1.0.0",
+  "description": "Android development skills and workflows based on Google's architecture guidance.",
+  "author": {
+    "name": "Pablo Cha",
+    "email": "pablo.cha@pcha.dev",
+    "url": "https://github.com/pcha"
+  },
+  "homepage": "https://github.com/pcha/android-claude-plugin#readme",
+  "repository": "https://github.com/pcha/android-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "android",
+    "kotlin",
+    "architecture",
+    "jetpack-compose",
+    "viewmodel",
+    "hilt",
+    "coroutines",
+    "room"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Android Development",
+    "shortDescription": "Architecture and delivery workflows for Android apps.",
+    "longDescription": "Build Android apps with guidance for Compose, architecture layers, ViewModels, data, dependency injection, testing, project creation, and Play Store setup.",
+    "developerName": "Pablo Cha",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Android architecture guidance",
+      "Android project scaffolding",
+      "Play Store publishing setup"
+    ],
+    "defaultPrompt": "Help me design and build an Android feature using modern architecture."
+  }
+}
