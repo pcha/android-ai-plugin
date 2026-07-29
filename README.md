@@ -1,12 +1,36 @@
-# Android Claude Plugin
+# Android Development Plugin for Claude Code and Codex
 
-A [Claude Code](https://claude.ai/code) plugin with skills and commands for Android development following [Google's official architecture guidelines](https://developer.android.com/topic/architecture).
+A plugin for Claude Code and Codex with Android development skills and workflows following [Google's official architecture guidelines](https://developer.android.com/topic/architecture).
 
-## Installation
+## Claude Code installation
+
+### From the pcha-plugins Marketplace
+
+```bash
+# Add the marketplace
+claude plugin marketplace add https://raw.githubusercontent.com/pcha/plugins-marketplace/main/marketplace.json
+
+# Install the plugin
+claude plugin install android-claude-plugin
+```
+
+### From Local Path
+
+```bash
+claude plugin install /path/to/android-claude-plugin
+```
+
+### From GitHub Repository
 
 ```bash
 claude plugin install https://github.com/pcha/android-claude-plugin
 ```
+
+## Codex installation
+
+Codex installs plugins from a configured marketplace. For local development, add this repository to a local marketplace, install `android-claude-plugin` from that marketplace, and start a new thread so Codex discovers its skills.
+
+The Codex manifest is located at `.codex-plugin/plugin.json`. The existing Claude Code manifest and commands remain available, so both clients can use the same repository.
 
 ## Skills
 
@@ -29,6 +53,8 @@ Commands are invoked explicitly with `/command-name`.
 |---|---|
 | `/new-android` | Scaffold a new Android project from the official [architecture-templates](https://github.com/android/architecture-templates), with optional GitHub repo and release workflow |
 | `/android-play-store-setup` | Guided setup for Play Store publishing secrets (keystore + Google Play service account) |
+
+In Codex these workflows are exposed as the `new-android` and `android-play-store-setup` skills. Codex can select them automatically from the request; they can also be named explicitly.
 
 ## Versioning
 
