@@ -1,7 +1,7 @@
 {
   "name": "android-claude-plugin",
   "displayName": "Android Development",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Skills and commands for Android development with clean architecture, ViewModels, data layer, DI, and testing.",
   "author": {
     "name": "Pablo Cha",

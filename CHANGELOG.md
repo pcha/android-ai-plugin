@@ -1,4 +1,14 @@
-# 1.1.0 (2026-07-01)
+# [1.2.0](https://github.com/pcha/android-claude-plugin/compare/v1.1.0...v1.2.0) (2026-07-29)
+
+
+### Features
+
+* add Codex plugin manifest ([a9fbb16](https://github.com/pcha/android-claude-plugin/commit/a9fbb16b4f65c7da6fae259fd9781a02f75848af))
+* **skills:** add android-play-store-setup and new-android skills for Codex ([041f33b](https://github.com/pcha/android-claude-plugin/commit/041f33b2fa8af712ac11a7ce0f46bb04c5ec58ae))
+
+
+
+# [1.1.0](https://github.com/pcha/android-claude-plugin/compare/13caae7eae80f1ec99e5b30cc6b83e3c0656263a...v1.1.0) (2026-07-01)
 
 
 ### Bug Fixes
