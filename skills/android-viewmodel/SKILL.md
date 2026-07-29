@@ -1,7 +1,6 @@
 ---
 name: android-viewmodel
-description: Use this skill when creating or modifying Android ViewModels, exposing UI state as StateFlow, using stateIn() with WhileSubscribed, or deciding what should and shouldn't go in a ViewModel. Also use when the user asks about HiltViewModel, viewModelScope, how to handle one-time events in MVVM, or when to use MutableStateFlow vs stateIn.
-version: 1.0.0
+description: "Use this skill when creating or modifying Android ViewModels, exposing UI state as StateFlow, using stateIn() with WhileSubscribed, or deciding what should and shouldn't go in a ViewModel. Also use when the user asks about HiltViewModel, viewModelScope, how to handle one-time events in MVVM, or when to use MutableStateFlow vs stateIn."
 ---
 
 # Android ViewModel Best Practices

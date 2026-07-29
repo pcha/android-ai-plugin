@@ -1,7 +1,6 @@
 ---
 name: android-layers
-description: Use this skill when discussing the Android three-layer architecture (UI, Domain, Data), deciding where code belongs in an Android project, understanding layer dependencies, or planning how features should be structured across layers. Also use when the user asks about use cases, interactors, the optional domain layer, or how layers communicate via coroutines and Flow.
-version: 1.0.0
+description: "Use this skill when discussing the Android three-layer architecture (UI, Domain, Data), deciding where code belongs in an Android project, understanding layer dependencies, or planning how features should be structured across layers. Also use when the user asks about use cases, interactors, the optional domain layer, or how layers communicate via coroutines and Flow."
 ---
 
 # Android Three-Layer Architecture
@@ -22,7 +21,8 @@ Dependencies always point downward. Upper layers NEVER know about lower-layer im
 - Render data and react to user input
 - Built with Jetpack Compose
 - State holders: `ViewModel` (screen-level) or plain state holder classes (reusable components)
-- Does NOT access databases, DataStore, SharedPreferences, Firebase, GPS, Bluetooth directly
+- Does NOT access databases, DataStore, SharedPreferences, Firebase, GPS, Bluetooth,
+  on-device ML (ML Kit) or camera/sensor SDKs directly — always through a repository
 - Adapts to form factors via `currentWindowAdaptiveInfo()` and adaptive layout components
 
 ## Domain Layer (optional — use in large apps)
@@ -34,7 +34,7 @@ Dependencies always point downward. Upper layers NEVER know about lower-layer im
 
 ## Data Layer
 - One `Repository` per data type: `MoviesRepository`, `PaymentsRepository`
-- One `DataSource` per system data source (network, Room, files, prefs)
+- One `DataSource` per system data source (network, Room, files, prefs, camera, on-device ML, sensors)
 - Repository responsibilities:
   - Expose data to the rest of the app
   - Centralize and coordinate data changes

@@ -1,7 +1,6 @@
 ---
 name: android-ui-layer
-description: Use this skill when building Android UI with Jetpack Compose, collecting StateFlows in composables, handling lifecycle effects, managing UI state across configuration changes, or implementing screen navigation. Also use when the user asks about collectAsStateWithLifecycle, LifecycleStartEffect, LifecycleResumeEffect, adaptive layouts, or any Jetpack Compose best practices.
-version: 1.0.0
+description: "Use this skill when building Android UI with Jetpack Compose, collecting StateFlows in composables, handling lifecycle effects, managing UI state across configuration changes, or implementing screen navigation. Also use when the user asks about collectAsStateWithLifecycle, LifecycleStartEffect, LifecycleResumeEffect, adaptive layouts, or any Jetpack Compose best practices."
 ---
 
 # Android UI Layer Best Practices
@@ -56,7 +55,7 @@ LifecycleStartEffect(locationManager) {
 - Design reusable composables with hoistable state — don't embed ViewModel inside reusable components
 
 ## Anti-patterns
-- Accessing data sources (DB, GPS, network) directly from composables or Activities
+- Accessing data sources (DB, GPS, network, camera, ML Kit/on-device ML, sensors) directly from composables or Activities
 - Collecting flows without lifecycle awareness (`collectAsState()`)
 - Sending one-shot events from ViewModel to UI as `SharedFlow` — model them as state instead
 - Overriding Activity lifecycle methods in Compose apps

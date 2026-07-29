@@ -1,7 +1,6 @@
 ---
 name: android-architecture-principles
-description: Use this skill when working on an Android project and the user asks about architecture design, best practices for structuring app code, separation of concerns, unidirectional data flow (UDF), single source of truth (SSOT), or how to organize responsibilities across layers. Also use when implementing a new feature and guidance is needed on which layer code belongs in, or when reviewing existing architecture decisions.
-version: 1.0.0
+description: "Use this skill when working on an Android project and the user asks about architecture design, best practices for structuring app code, separation of concerns, unidirectional data flow (UDF), single source of truth (SSOT), or how to organize responsibilities across layers. Also use when implementing a new feature and guidance is needed on which layer code belongs in, or when reviewing existing architecture decisions."
 ---
 
 # Android Architecture Core Principles

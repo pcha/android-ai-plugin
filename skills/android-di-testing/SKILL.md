@@ -1,7 +1,6 @@
 ---
 name: android-di-testing
-description: Use this skill when setting up dependency injection with Hilt in Android, writing unit tests for ViewModels or repositories, creating fake implementations for testing, or testing StateFlows and coroutines. Also use when the user asks about constructor injection, Hilt modules, @Binds, @Singleton scoping, fakes vs mocks, or how to test with runTest and WhileSubscribed.
-version: 1.0.0
+description: "Use this skill when setting up dependency injection with Hilt in Android, writing unit tests for ViewModels or repositories, creating fake implementations for testing, or testing StateFlows and coroutines. Also use when the user asks about constructor injection, Hilt modules, @Binds, @Singleton scoping, fakes vs mocks, or how to test with runTest and WhileSubscribed."
 ---
 
 # Android Dependency Injection & Testing
