@@ -8,27 +8,27 @@ A plugin for Claude Code and Codex with Android development skills and workflows
 
 ```bash
 # Add the marketplace
-claude plugin marketplace add https://raw.githubusercontent.com/pcha/plugins-marketplace/main/marketplace.json
+claude plugin marketplace add https://github.com/pcha/plugins-marketplace.git
 
 # Install the plugin
-claude plugin install android-claude-plugin
+claude plugin install android-ai-plugin
 ```
 
 ### From Local Path
 
 ```bash
-claude plugin install /path/to/android-claude-plugin
+claude plugin install /path/to/android-ai-plugin
 ```
 
 ### From GitHub Repository
 
 ```bash
-claude plugin install https://github.com/pcha/android-claude-plugin
+claude plugin install https://github.com/pcha/android-ai-plugin
 ```
 
 ## Codex installation
 
-Codex installs plugins from a configured marketplace. For local development, add this repository to a local marketplace, install `android-claude-plugin` from that marketplace, and start a new thread so Codex discovers its skills.
+Codex installs plugins from a configured marketplace. For local development, add this repository to a local marketplace, install `android-ai-plugin` from that marketplace, and start a new thread so Codex discovers its skills.
 
 The Codex manifest is located at `.codex-plugin/plugin.json`. The existing Claude Code manifest and commands remain available, so both clients can use the same repository.
 

@@ -1,5 +1,5 @@
 {
-  "name": "android-claude-plugin",
+  "name": "android-ai-plugin",
   "displayName": "Android Development",
   "version": "1.2.0",
   "description": "Skills and commands for Android development with clean architecture, ViewModels, data layer, DI, and testing.",
@@ -7,7 +7,7 @@
     "name": "Pablo Cha",
     "email": "pablo.cha@pcha.dev"
   },
-  "repository": "https://github.com/pcha/android-claude-plugin",
+  "repository": "https://github.com/pcha/android-ai-plugin",
   "keywords": [
     "android",
     "kotlin",

@@ -1,5 +1,5 @@
 {
-  "name": "android-development-plugin",
+  "name": "android-ai-plugin",
   "version": "1.0.0",
   "description": "Android development skills and workflows based on Google's architecture guidance.",
   "author": {
@@ -7,8 +7,8 @@
     "email": "pablo.cha@pcha.dev",
     "url": "https://github.com/pcha"
   },
-  "homepage": "https://github.com/pcha/android-claude-plugin#readme",
-  "repository": "https://github.com/pcha/android-claude-plugin",
+  "homepage": "https://github.com/pcha/android-ai-plugin#readme",
+  "repository": "https://github.com/pcha/android-ai-plugin",
   "license": "MIT",
   "keywords": [
     "android",
