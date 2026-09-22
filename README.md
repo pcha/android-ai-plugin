@@ -8,7 +8,7 @@ A plugin for Claude Code and Codex with Android development skills and workflows
 
 ```bash
 # Add the marketplace
-claude plugin marketplace add https://github.com/pcha/plugins-marketplace.git
+claude plugin marketplace add https://github.com/pcha/agent-plugins-marketplace.git
 
 # Install the plugin
 claude plugin install android-ai-plugin
