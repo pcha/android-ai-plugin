@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/pcha/android-ai-plugin/compare/v1.3.0...v1.4.0) (2026-10-12)
+
+
+### Features
+
+* **opencode:** support Android skills and commands in OpenCode V2 ([d0b94eb](https://github.com/pcha/android-ai-plugin/commit/d0b94ebe73d19331fa5b2c4ffbe6463a3cb17950))
+
+
+
 # [1.3.0](https://github.com/pcha/android-ai-plugin/compare/v1.2.0...v1.3.0) (2026-09-20)
 
 
