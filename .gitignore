@@ -4,3 +4,7 @@ settings.local.json
 # Memory (personal, project-specific)
 memory/
 MEMORY.md
+
+# OpenCode package dependencies and local package archives
+node_modules/
+*.tgz

@@ -1,6 +1,6 @@
-# Android Development Plugin for Claude Code and Codex
+# Android Development Plugin for Claude Code, Codex, and OpenCode
 
-A plugin for Claude Code and Codex with Android development skills and workflows following [Google's official architecture guidelines](https://developer.android.com/topic/architecture).
+A plugin for Claude Code, Codex, and OpenCode V2 with Android development skills and workflows following [Google's official architecture guidelines](https://developer.android.com/topic/architecture).
 
 ## Claude Code installation
 
@@ -32,9 +32,32 @@ Codex installs plugins from a configured marketplace. For local development, add
 
 The Codex manifest is located at `.codex-plugin/plugin.json`. The existing Claude Code manifest and commands remain available, so both clients can use the same repository.
 
+## OpenCode V2 installation
+
+Install the plugin globally from GitHub (no npm publication is required):
+
+```bash
+opencode plugin add github:pcha/android-ai-plugin
+```
+
+For a project-only installation, add the package to that project's `opencode.jsonc`:
+
+```jsonc
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugins": ["github:pcha/android-ai-plugin"]
+}
+```
+
+For local development, run `npm ci` in this repository and configure its absolute path in the consuming project's `plugins` array instead. Preserve any existing plugin entries.
+
+The OpenCode adapter registers all eight skills and both commands from the shared `skills/` and `commands/` directories. Skills are available automatically when relevant or explicitly through `@skill-name`. Use `/new-android` and `/android-play-store-setup` to invoke the workflows directly. They retain OpenCode's permissions and the selected model; the Claude-only `model: sonnet` override is not applied.
+
+Manage the installed package with `opencode plugin list`, `opencode plugin check`, and `opencode plugin update`. OpenCode does not read the Claude or Codex marketplace manifests; the [pcha marketplace](https://github.com/pcha/agent-plugins-marketplace) lists the corresponding Git installation command.
+
 ## Skills
 
-Skills are invoked automatically by Claude based on context, or manually with `/skill-name`.
+Skills are selected by the client based on context. Claude also supports `/skill-name`; OpenCode V2 supports explicit `@skill-name` mentions.
 
 | Skill | Triggers automatically when... |
 |---|---|
@@ -56,6 +79,18 @@ Commands are invoked explicitly with `/command-name`.
 
 In Codex these workflows are exposed as the `new-android` and `android-play-store-setup` skills. Codex can select them automatically from the request; they can also be named explicitly.
 
+In OpenCode V2, both workflows are available as skills and slash commands. The commands explicitly attach the matching shared skill, preserving its validation and secret-handling rules.
+
+## Development
+
+```bash
+npm ci
+npm run check
+npm test
+```
+
+Tests verify registration, command context, shared workflow references, version consistency, and installation from the packed package. The OpenCode adapter targets the V2 plugin API and does not implement V1 hooks.
+
 ## Versioning
 
 Releases follow [Conventional Commits](https://www.conventionalcommits.org/):
@@ -65,3 +100,5 @@ Releases follow [Conventional Commits](https://www.conventionalcommits.org/):
 - `BREAKING CHANGE` → major bump
 
 See [CHANGELOG.md](./CHANGELOG.md) for the full release history.
+
+The release workflow synchronizes the Claude, Codex, and OpenCode package versions, including the npm lockfile.

@@ -16,13 +16,23 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+
       - name: Bump version and generate changelog
         id: changelog
         uses: TriPSs/conventional-changelog-action@v5
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          version-file: ./.claude-plugin/plugin.json
+          version-file: ./.claude-plugin/plugin.json,./.codex-plugin/plugin.json,./package.json
           version-path: version
+          pre-commit: ./scripts/release-lock.cjs
           release-count: 0
           skip-on-empty: true
 

@@ -1,0 +1,25 @@
+{
+  "name": "android-ai-plugin",
+  "version": "1.3.0",
+  "description": "Android development skills and workflows for OpenCode V2, Claude Code, and Codex.",
+  "type": "module",
+  "exports": "./opencode/index.js",
+  "files": ["opencode/", "skills/", "commands/", ".claude-plugin/plugin.json", ".codex-plugin/plugin.json"],
+  "scripts": {
+    "test": "node --test",
+    "check": "tsc --allowJs --checkJs --noEmit --module nodenext --target es2022 --skipLibCheck opencode/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pcha/android-ai-plugin.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@opencode/plugin": "2.0.26",
+    "yaml": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.3"
+  }
+}
