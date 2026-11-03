@@ -16,6 +16,15 @@ description: "Use this skill when building Android UI with Jetpack Compose, coll
 - Use adaptive layout components: `NavigationSuiteScaffold`, canonical layouts
 - Use `currentWindowAdaptiveInfo()` for window size class-aware state
 
+## Composable Function Design
+- Keep each composable **small and focused on one UI responsibility**.
+- Make its inputs, state, and emitted events explicit so its behavior is **predictable and easy to understand**.
+- Keep it **independent** of ViewModels and data sources; pass state in and callbacks out.
+- Design it to be **reusable and composable with other UI pieces** rather than tied to one screen or layout.
+- Prefer flexible APIs—parameters, slots, and modifiers where appropriate—so it can serve different contexts without duplication.
+
+In short: composables should be **small, independent, predictable, connectable, maintainable, reusable, and flexible**.
+
 ## State Collection
 Always collect UI state with `collectAsStateWithLifecycle()` — not `collectAsState()`:
 ```kotlin
